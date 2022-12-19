@@ -2,11 +2,11 @@
   <img align="center" src="https://github.com/victorphoenix3/socialDapp/blob/main/src/logo.jpg" width="200" height="200"></img>
 </p>
 
-<h1 align="center">socialDapp</h1>
+<h1 align="center">Htmlcoin Image Board</h1>
 
 <p aign="center">
-  <p align="center">Decentralized image sharing & social media platform on Ethereum blockchain.</p>
-  <p align="center">Website: <a href="https://aged-tooth-1273.on.fleek.co/"></a>https://aged-tooth-1273.on.fleek.co/</p>
+  <p align="center">Decentralized image sharing & social media platform on Htmlcoin blockchain.</p>
+  <p align="center">Website: <a href="https://janus.htmlcoin.com/images"></a>https://janus.htmlcoin.com/images</p>
 </p>
 
 ## Inspired by
@@ -16,14 +16,14 @@
 **Languages:**
 ```Solidity, JavaScript, HTML5, CSS3```
 
-**Libraries:** 
+**Libraries:**
 ```React.js, Web3.js```
 
-**Tools:** 
+**Tools:**
 ```IPFS```
 
-**Platforms:** 
-```Ethereum, Fleek```
+**Platforms:**
+```Htmlcoin, Ethereum, Fleek```
 
 ## Networks
 1. ```Matic Mumbai Test Network```
@@ -41,7 +41,7 @@ Open ganache personal blockchain. Don't forget to add private key in MetaMask.
 ganache-cli
 ```
 
-Install dependancies
+Install dependencies
 
 ```
 npm install

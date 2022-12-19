@@ -12,7 +12,7 @@ class Main extends Component {
           <div className="row">
             <div className="col-md-10">
                 <img
-                  src={`https://ipfs.infura.io/ipfs/${this.props.currentHash}`}
+                  src={`https://cryptobros.infura-ipfs.io/ipfs/${this.props.currentHash}`}
                   controls
                 >
                 </img>
@@ -48,7 +48,7 @@ class Main extends Component {
                     <div>
                       <p onClick={() => this.props.changeImage(image.hash, image.title)}>
                         <img
-                          src={`https://ipfs.infura.io/ipfs/${image.hash}`}
+                          src={`https://cryptobros.infura-ipfs.io/ipfs/${image.hash}`}
                           style={{ width: '170px' }}
                         />
                       </p>

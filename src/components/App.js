@@ -7,8 +7,22 @@ import Web3 from 'web3';
 import './App.css';
 
 //Declare IPFS
+const projectId = '2IqIFkHHdJB8Mz6yf0gnxi0fAS6';   // <---------- your Infura Project ID
+
+const projectSecret = '3e89edda10587f446e87b2c83b407aee';  // <---------- your Infura Secret
+// (for security concerns, consider saving these values in .env files)
+
+const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+
 const ipfsClient = require('ipfs-http-client')
-const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
+const ipfs = ipfsClient({
+  host: "ipfs.infura.io",
+  port: 5001,
+  protocol: "https",
+  headers: {
+      authorization: auth,
+  },
+});
 
 class App extends Component {
 
@@ -18,15 +32,15 @@ class App extends Component {
   }
 
   async loadWeb3() {
-    if (window.ethereum) {
-      window.web3 = new Web3(window.ethereum)
-      await window.ethereum.enable()
+    if (window.htmlcoin) {
+      window.web3 = new Web3(window.htmlcoin)
+      await window.htmlcoin.enable()
     }
     else if (window.web3) {
       window.web3 = new Web3(window.web3.currentProvider)
     }
     else {
-      window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
+      window.alert('Non-Htmlcoin browser detected. You should consider trying Altmasq!')
     }
   }
 
@@ -50,7 +64,7 @@ class App extends Component {
           images: [...this.state.images, image]
         })
       }
-      //Set latest image with title to view as default 
+      //Set latest image with title to view as default
       const latest = await dapp.methods.images(imageCount).call()
       this.setState({
         currentHash: latest.hash,
