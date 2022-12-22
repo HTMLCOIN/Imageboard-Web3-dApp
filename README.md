@@ -23,13 +23,10 @@
 ```IPFS```
 
 **Platforms:**
-```Htmlcoin, Ethereum, Fleek```
+```Htmlcoin, Fleek```
 
 ## Networks
-1. ```Matic Mumbai Test Network```
-2. ```Rinkeby Test Network```
-3. ```Ropsten Test Network```
-4. ```Goerli Test Network```
+1. ```Htmlcoin Network```
 
 ## Contracts
 ` /src/contracts/socialDapp.sol`

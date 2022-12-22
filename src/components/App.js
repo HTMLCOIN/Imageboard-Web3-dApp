@@ -7,10 +7,9 @@ import Web3 from 'web3';
 import './App.css';
 
 //Declare IPFS
-const projectId = '2IqIFkHHdJB8Mz6yf0gnxi0fAS6';   // <---------- your Infura Project ID
 
-const projectSecret = '3e89edda10587f446e87b2c83b407aee';  // <---------- your Infura Secret
-// (for security concerns, consider saving these values in .env files)
+const projectId = process.env.PROJECTID
+const projectSecret = process.env.PROJECTSECRET
 
 const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
 
@@ -32,9 +31,9 @@ class App extends Component {
   }
 
   async loadWeb3() {
-    if (window.htmlcoin) {
-      window.web3 = new Web3(window.htmlcoin)
-      await window.htmlcoin.enable()
+    if (window.altmasq) {
+      window.web3 = new Web3(window.altmasq)
+      await window.altmasq.enable()
     }
     else if (window.web3) {
       window.web3 = new Web3(window.web3.currentProvider)
